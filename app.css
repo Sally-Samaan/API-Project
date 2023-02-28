@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 187, 204);
+    transition: background-color 0.5s ease-out;
+  }
+  
+  .search-container {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    font-size: 20px;
+    font-family: 'Courier New', 'Courier', 'monospace', Arial, sans-serif;
+    outline: none;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: border-line, radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 252, 121, 1) 100%);
+    background-blend-mode: overlay;
+  }
+  
+  #boarders-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: unset;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+  }
+  :root {
+    --line-rotation: 0deg;
+  }
+  
+  .border-line {
+    flex-grow: 12;
+    border: 3px solid transparent;
+    margin-bottom: 6em;
+    transition: border-color 2s ease-out;
+    transform: rotateZ(var(--line-rotation));
+  }
+  
+  /* Generate random line rotations for each line */
+  .border-line:nth-child(1) {
+    --line-rotation: ${Math.floor(Math.random() * 360)}deg;
+  }
+  .border-line:nth-child(2) {
+    --line-rotation: ${Math.floor(Math.random() * 360)}deg;
+  }
+  .border-line:nth-child(3) {
+    --line-rotation: ${Math.floor(Math.random() * 360)}deg;
+  }
