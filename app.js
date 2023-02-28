@@ -3,7 +3,8 @@ async function fetchApi(country) {
       const url = `https://restcountries.com/v3.1/name/${country}`;
       const response = await fetch(url);
       const data = await response.json();
-      return data;
+      const filteredData = data.filter(item => item.name.common.toLowerCase().includes(country.toLowerCase()));
+      return filteredData;
     } catch (error) {
       console.log(error);
     }
