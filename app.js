@@ -3,7 +3,7 @@ async function fetchApi(country) {
       const url = `https://restcountries.com/v3.1/name/${country}`;
       const response = await fetch(url);
       const data = await response.json();
-      return filteredData;
+      return data;
     } catch (error) {
       console.log(error);
     }
