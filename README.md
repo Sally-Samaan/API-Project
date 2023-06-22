@@ -1,5 +1,5 @@
 # API-Project
-Country color 
+Country colour 
 
 This web application fetches information about countries from an external API called restcountries.com. 
 The user can search for a country and the application returns three parameters - population, area, and borders.
